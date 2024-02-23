@@ -1,7 +1,7 @@
 const carousel = document.querySelectorAll('.carrosel .product')
 const leftBtn = document.querySelector('.left')
 const rigthBtn = document.querySelector('.rigth')
-let carousel2 = document.querySelector('.pr')
+let carousel2 = document.querySelector('.product')
 let count = 0
 
 
@@ -91,6 +91,7 @@ function updateCarousel() {
     if (product) {
       const productDiv = renderProduct(product);
       item.appendChild(productDiv);
+    
   
     }
   }
@@ -107,7 +108,7 @@ rigthBtn.addEventListener('click', rigth);
 updateCarousel();
 
 
- 
+
 
 function mostrarNav(){
   const showNav = document.querySelector('#showSubProducts')
