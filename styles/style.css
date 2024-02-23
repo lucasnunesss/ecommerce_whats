@@ -179,7 +179,7 @@ section{
 }
 
 .carrosel{
-  width: 1300px;
+  width: 1400px;
   overflow: hidden;
   display: flex;
   padding: 30px 0px;
@@ -190,7 +190,7 @@ section{
   width: 400px;
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
   border-radius: 20px;
-  margin-right: 20px;
+
 }
 
 .carrosel .product img{
@@ -244,6 +244,10 @@ section{
   height: 50px;
   border: none;
   background-color: transparent;
-  margin: 0 10px ;
 
+}
+
+.left{
+  margin-right: -90px;
+  transition-delay: 2s;
 }

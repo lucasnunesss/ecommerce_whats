@@ -1,26 +1,44 @@
 const carousel = document.querySelectorAll('.carrosel .product')
 const leftBtn = document.querySelector('.left')
 const rigthBtn = document.querySelector('.rigth')
-let carousel2 = document.querySelector('.carrosel')
+let carousel2 = document.querySelector('.pr')
 let count = 0
 
 
 const bc = [
   {
-    img: './flor2.jpeg',
-    h1: 'Rosa',
+    img: './5.jpeg',
+    h1: '1',
    
     preco: 27
   },
   {
     img: './5.jpeg',
-    h1: 'sei la',
+    h1: '2',
     id: 2,
     preco: 29
   },
   {
-    img: './flor2.jpeg',
-    h1: 'Rosa',
+    img: './5.jpeg',
+    h1: '3',
+    id: 3,
+    preco: 27
+  },
+  {
+    img: './5.jpeg',
+    h1: '4',
+    id: 3,
+    preco: 27
+  },
+  {
+    img: './5.jpeg',
+    h1: '5',
+    id: 3,
+    preco: 27
+  },
+  {
+    img: './5.jpeg',
+    h1: '6',
     id: 3,
     preco: 27
   },
@@ -28,18 +46,17 @@ const bc = [
  
 function left(){
 
-  if (count === 0){
-    count = carousel.length / 3 - 1
-  } else {
-    count--
-  }
-  mover()
+
+    count++
+  
+  updateCarousel()
 }
 
 function renderProduct(product) {
   const productDiv = document.createElement('div');
-  productDiv.classList.add('product');
+
   productDiv.innerHTML = `
+
     <div class="imagemProduct">
       <img src="${product.img}" alt="">
     </div>
@@ -47,7 +64,9 @@ function renderProduct(product) {
       <h3 class="title">${product.h1}</h3>
       <span class="price">${product.preco}</span>
       <button>Adicionar</button>
+     
     </div>
+
   `;
   return productDiv;
 }
@@ -58,21 +77,32 @@ function rigth(){
   if (count < 0) {
     count = bc.length - 1;
   }
-  mover()
+ updateCarousel()
 
-  const productDiv = renderProduct(bc[0]);
-  carousel2.appendChild(productDiv);
 }
 
-function mover(){
- 
-  carousel.forEach((item) => {
-    item.style.transform = `translateX(${count * 103}px)`
-  })
+function updateCarousel() {
+  for (let i = 0; i < carousel.length; i++) {
+    const newIndex = count + i;
+    const product = bc[newIndex % bc.length]; // Wrap around to the beginning
+    const item = carousel[i];
+    item.innerHTML = '';
+    if (product) {
+      const productDiv = renderProduct(product);
+      item.appendChild(productDiv);
+    }
+  }
 }
 
-leftBtn.addEventListener('click', left)
-rigthBtn.addEventListener('click', rigth)
+
+
+
+
+leftBtn.addEventListener('click', left);
+rigthBtn.addEventListener('click', rigth);
+
+// Inicializa o carrossel
+updateCarousel();
 
 
  
