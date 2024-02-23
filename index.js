@@ -58,12 +58,13 @@ function renderProduct(product) {
   productDiv.innerHTML = `
 
     <div class="imagemProduct">
+    
       <img src="${product.img}" alt="">
     </div>
     <div class="inf">
       <h3 class="title">${product.h1}</h3>
-      <span class="price">${product.preco}</span>
-      <button>Adicionar</button>
+      <span class="price">R$${product.preco}</span>
+      <button>+</button>
      
     </div>
 
@@ -84,12 +85,13 @@ function rigth(){
 function updateCarousel() {
   for (let i = 0; i < carousel.length; i++) {
     const newIndex = count + i;
-    const product = bc[newIndex % bc.length]; // Wrap around to the beginning
+    const product = bc[newIndex % bc.length]
     const item = carousel[i];
     item.innerHTML = '';
     if (product) {
       const productDiv = renderProduct(product);
       item.appendChild(productDiv);
+  
     }
   }
 }

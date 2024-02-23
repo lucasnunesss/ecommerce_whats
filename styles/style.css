@@ -205,30 +205,38 @@ section{
   margin-top: -10px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between; 
   background-color: #FFFFFF;
+
 }
 
 .carrosel .product .inf button{
-  margin: 20px 0;
-  width: 100%;
-  background-color: rgb(230, 10,65);
+  width: 1%;
+  font-size: 40px;
+  margin: 5px 0 -25px 0;
+  
+  background-color: transparent;
   border: none;
   outline: none;
-  color: white;
-  padding: 7px 10px;
+  color: rgb(247, 62, 93);
+  
   cursor: pointer;
-  border-radius: 5px;
+ 
 }
 
 .carrosel .product .inf .title{
   font-size: 24px;
 }
 
-.carrosel .product .inf .price{
-  font-size: 18px;
+.carrosel .product .inf  .price{
+  font-size: 15px;
+  font-weight:lighter;
+  color: rgb(58, 58, 58);
   margin-top: 5px;
 }
+
+
 
 .carrosel .seta{
   width: 1300px;
@@ -239,15 +247,20 @@ section{
 }
 
 .carrosel .seta button{
-  font-size: 40px;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   border: none;
   background-color: transparent;
-
+  color: #D85B95;
+  font-weight: 100;
+  cursor: pointer;
+  
 }
 
 .left{
   margin-right: -90px;
-  transition-delay: 2s;
+
+
 }
+
