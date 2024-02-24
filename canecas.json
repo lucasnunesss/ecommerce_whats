@@ -1,0 +1,38 @@
+[
+  {
+    "img": "./img/caneca.png",
+    "h1": "Petalas de Rosa",
+    "id": 1,
+    "preco": 27
+  },
+  {
+    "img": "./img/flor.png",
+    "h1": "2",
+    "id": 2,
+    "preco": 29
+  },
+  {
+    "img": "./img/5.jpeg",
+    "h1": "3",
+    "id": 3,
+    "preco": 27
+  },
+  {
+    "img": "./img/5.jpeg",
+    "h1": "4",
+    "id": 3,
+    "preco": 27
+  },
+  {
+    "img": "./img/5.jpeg",
+    "h1": "5",
+    "id": 3,
+    "preco": 27
+  },
+  {
+    "img": "./img/5.jpeg",
+    "h1": "6",
+    "id": 3,
+    "preco": 27
+  }
+]

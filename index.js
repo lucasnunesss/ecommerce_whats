@@ -1,17 +1,21 @@
 const carousel = document.querySelectorAll('.carrosel .product')
-
+const section = document.querySelectorAll('section')
+const carousel3 = document.querySelector('#carr')
 let carousel2 = document.querySelector('.product')
 let count = 0
 let count2 = 0
 
-
+const roses2 = document.querySelectorAll('.carrosel-a .product-a')
 
 
 function left(){
 
+ 
+  
+  const roses = document.querySelectorAll('.carousel roses')
 
   count++
-  updateCarousel()
+  updateCarousel(roses)
 }
 
 function renderProduct(product) {
@@ -34,70 +38,98 @@ function renderProduct(product) {
 }
 
 function rigth(){
-
+  const roses = document.querySelectorAll('.id')
   count--;
   if (count < 0) {
     count = carousel.length - 1;
   }
- updateCarousel()
+ updateCarousel(roses)
 
 }
 
 
 function left2(){
 
-
+  const roses2 = document.querySelectorAll('.carousel-a .product-a')
   count2++
-  updateCarousel()
+  updateCarousel(roses2)
 }
 
 
 function rigth2(){
 
-  count2--;
-  if (count2 < 0) {
-    count2 = carousel.length - 1;
-  }
- updateCarousel()
 
 }
 
-async function updateCarousel() {
-  const section = document.querySelector('section')
-  console.log(section.id.includes('roses'))
-  const itens = await fetch('./itens.json')
-  const itens2 = await itens.json()
-  console.log(itens2[0])
-  for (let i = 0; i < carousel.length; i++) {
+
+
+async function updateCarousel(id = carousel, name) {
+  let itens
+  let itens2
+  if (name === 'caneca'){
+    itens = await fetch('./canecas.json')
+    itens2 = await itens.json()
+  }
+
+  if(name === 'rosas'){
+    itens = await fetch('./itens.json')
+    itens2 = await itens.json()
+  }
+ 
+
+  for (let i = 0; i < id.length; i++) {
     const newIndex = count + i;
     const product = itens2[newIndex % itens2.length]
-    const item = carousel[i];
+    const item = id[i];
     item.innerHTML = '';
     if (product) {
       const productDiv = renderProduct(product);
-      item.appendChild(productDiv);
-    
-    
+      item.appendChild(productDiv);  
     }
   }
 }
 
 
- 
-    const leftBtn = document.querySelector('.left')
-    const rigthBtn = document.querySelector('.rigth')
+const leftBtn = document.querySelector('.left-roses')
+const rigthBtn = document.querySelector('.rigth-roses')
   
-    leftBtn.addEventListener('click', left)
-    rigthBtn.addEventListener('click', rigth)
+leftBtn.addEventListener('click', e => {
+  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
+  updateCarousel(roses, 'rosas')
+  count++
+
+})
+rigthBtn.addEventListener('click', e => {
+  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
+  updateCarousel(roses, 'rosas')
+  count--
+  if (count < 0) {
+    count = carousel.length - 1;
+  }
+})
   
 
-const l = document.querySelector('.btncaneca')
 
-const j = document.querySelector('.btn2caneca')
+const leftBtna = document.querySelector('.left-caneca')
+const rigthBtna = document.querySelector('.rigth-caneca')
+leftBtna.addEventListener('click', e => {
+  const roses2 = document.querySelectorAll('.carrosel-caneca .product-caneca')
+  updateCarousel(roses2, 'caneca')
+  count++
+
+})
+rigthBtna.addEventListener('click', e => {
+  const roses2 = document.querySelectorAll('.carrosel-caneca .product-caneca')
+  updateCarousel(roses2, 'caneca')
+  count--;
+  if (count < 0) {
+    count = carousel.length - 1;
+  }
+
+})
 
 
-updateCarousel();
-
+updateCarousel(carousel)
 
 
 

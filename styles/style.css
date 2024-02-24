@@ -187,7 +187,7 @@ section > h1{
 }
 
 
-.carrosel{
+.carrosel-roses, .carrosel-caneca{
   width: 1400px;
   overflow: hidden;
   display: flex;
@@ -197,26 +197,23 @@ section > h1{
 
 }
 
-.carrosel .product{
+.carrosel-roses .product-roses, .carrosel-caneca .product-caneca {
   width: 400px;
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
   border-radius: 20px;
 
 }
 
-.carrosel .product img{
+.carrosel-roses .product-roses img, .carrosel-caneca .product-caneca img{
   width: 350px;
   height: 250px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.carrosel > .product > img .edit{
-  width: 50px;
-  height: 50px;
-}
 
-.carrosel .product .inf{
+
+.carrosel-roses .product-roses .inf, .carrosel-caneca .product-caneca .inf{
   padding: 20px 30px;
   margin-top: -10px;
   display: flex;
@@ -227,7 +224,7 @@ section > h1{
 
 }
 
-.carrosel .product .inf button{
+.carrosel-roses .product-roses .inf button, .carrosel-caneca .product-caneca .inf button{
   width: 1%;
   font-size: 40px;
   margin: 5px 0 -25px 0;
@@ -241,11 +238,11 @@ section > h1{
  
 }
 
-.carrosel .product .inf .title{
+.carrosel-roses .product-roses .inf .title, .carrosel-caneca .product-caneca .inf .title{
   font-size: 24px;
 }
 
-.carrosel .product .inf  .price{
+.carrosel-roses .product-roses .inf  .price, .carrosel-caneca .product-caneca .inf .price{
   font-size: 15px;
   font-weight:lighter;
   color: rgb(58, 58, 58);
@@ -254,7 +251,7 @@ section > h1{
 
 
 
-.carrosel .seta{
+.carrosel-roses .seta, .carrosel-caneca .seta{
   width: 1300px;
   position: absolute;
   justify-content: space-between;
@@ -262,7 +259,7 @@ section > h1{
   top: 40%;
 }
 
-.carrosel .seta button{
+.carrosel-roses .seta button, .carrosel-caneca .seta button{
   font-size: 30px;
   width: 50px;
   height: 50px;
@@ -275,10 +272,10 @@ section > h1{
 
 }
 
-.left{
+.left-roses, .left-caneca{
   margin-right: -90px;
 }
 
-.rigth{
+.rigth-roses, .rigth-caneca{
   margin-left: -14px;
 }
