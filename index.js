@@ -1,54 +1,16 @@
 const carousel = document.querySelectorAll('.carrosel .product')
-const leftBtn = document.querySelector('.left')
-const rigthBtn = document.querySelector('.rigth')
+
 let carousel2 = document.querySelector('.product')
 let count = 0
+let count2 = 0
 
 
-const bc = [
-  {
-    img: './5.jpeg',
-    h1: '1',
-   
-    preco: 27
-  },
-  {
-    img: './5.jpeg',
-    h1: '2',
-    id: 2,
-    preco: 29
-  },
-  {
-    img: './5.jpeg',
-    h1: '3',
-    id: 3,
-    preco: 27
-  },
-  {
-    img: './5.jpeg',
-    h1: '4',
-    id: 3,
-    preco: 27
-  },
-  {
-    img: './5.jpeg',
-    h1: '5',
-    id: 3,
-    preco: 27
-  },
-  {
-    img: './5.jpeg',
-    h1: '6',
-    id: 3,
-    preco: 27
-  },
-]
- 
+
+
 function left(){
 
 
-    count++
-  
+  count++
   updateCarousel()
 }
 
@@ -58,8 +20,7 @@ function renderProduct(product) {
   productDiv.innerHTML = `
 
     <div class="imagemProduct">
-    
-      <img src="${product.img}" alt="">
+      <img src="${product.img}" alt="" class='edit'>
     </div>
     <div class="inf">
       <h3 class="title">${product.h1}</h3>
@@ -76,34 +37,69 @@ function rigth(){
 
   count--;
   if (count < 0) {
-    count = bc.length - 1;
+    count = carousel.length - 1;
   }
  updateCarousel()
 
 }
 
-function updateCarousel() {
+
+function left2(){
+
+
+  count2++
+  updateCarousel()
+}
+
+
+function rigth2(){
+
+  count2--;
+  if (count2 < 0) {
+    count2 = carousel.length - 1;
+  }
+ updateCarousel()
+
+}
+
+async function updateCarousel() {
+  const section = document.querySelector('section')
+  console.log(section.id.includes('roses'))
+  const itens = await fetch('./itens.json')
+  const itens2 = await itens.json()
+  console.log(itens2[0])
   for (let i = 0; i < carousel.length; i++) {
     const newIndex = count + i;
-    const product = bc[newIndex % bc.length]
+    const product = itens2[newIndex % itens2.length]
     const item = carousel[i];
     item.innerHTML = '';
     if (product) {
       const productDiv = renderProduct(product);
       item.appendChild(productDiv);
     
-  
+    
     }
   }
 }
 
 
+ 
+    const leftBtn = document.querySelector('.leftroses')
+    const rigthBtn = document.querySelector('.rigthroses')
+  
+    leftBtn.addEventListener('click', e => {
+    
+      left()
+    })
+    rigthBtn.addEventListener('click', rigth)
+  
 
+const l = document.querySelector('.btncaneca')
 
+const j = document.querySelector('.btn2caneca')
 
-leftBtn.addEventListener('click', left);
-rigthBtn.addEventListener('click', rigth);
-
+l.addEventListener('click', left2)
+j.addEventListener('click', rigth2)
 // Inicializa o carrossel
 updateCarousel();
 
