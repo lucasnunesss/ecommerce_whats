@@ -84,13 +84,10 @@ async function updateCarousel() {
 
 
  
-    const leftBtn = document.querySelector('.leftroses')
-    const rigthBtn = document.querySelector('.rigthroses')
+    const leftBtn = document.querySelector('.left')
+    const rigthBtn = document.querySelector('.rigth')
   
-    leftBtn.addEventListener('click', e => {
-    
-      left()
-    })
+    leftBtn.addEventListener('click', left)
     rigthBtn.addEventListener('click', rigth)
   
 
@@ -98,9 +95,7 @@ const l = document.querySelector('.btncaneca')
 
 const j = document.querySelector('.btn2caneca')
 
-l.addEventListener('click', left2)
-j.addEventListener('click', rigth2)
-// Inicializa o carrossel
+
 updateCarousel();
 
 
