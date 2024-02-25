@@ -67,7 +67,7 @@ async function updateCarousel(id = carousel, name) {
   let itens
   let itens2
   if (name === 'caneca'){
-    itens = await fetch('./canecas.json')
+    itens = await fetch('./cestas.json')
     itens2 = await itens.json()
   }
 
@@ -106,6 +106,8 @@ rigthBtn.addEventListener('click', e => {
   if (count < 0) {
     count = carousel.length - 1;
   }
+
+ 
 })
   
 
@@ -122,13 +124,14 @@ rigthBtna.addEventListener('click', e => {
   const roses2 = document.querySelectorAll('.carrosel-caneca .product-caneca')
   updateCarousel(roses2, 'caneca')
   count--;
-  if (count < 0) {
-    count = carousel.length - 1;
-  }
 
+
+  if(count <= 0){
+    count = 8
+  }
 })
 
-
+console.log(count)
 updateCarousel(carousel)
 
 

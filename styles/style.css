@@ -17,6 +17,7 @@
 
 body{
   background-color: #FAFAFA;
+  overflow-x: hidden;
 }
 
 header{
@@ -32,7 +33,7 @@ header{
   top: 0;
   left: 0;
   box-shadow: 0px -25px 49px black;
- 
+  width: 100%;
 }
 
 header > .sellva{
@@ -188,11 +189,11 @@ section > h1{
 
 
 .carrosel-roses, .carrosel-caneca{
-  width: 1400px;
+  width: 1350px;
   overflow: hidden;
   display: flex;
   padding: 30px 0px;
-  position: relative;
+  max-width: 75%;
  
 
 }
@@ -256,7 +257,8 @@ section > h1{
   position: absolute;
   justify-content: space-between;
   display: flex;
-  top: 40%;
+  top: 50%;
+  
 }
 
 .carrosel-roses .seta button, .carrosel-caneca .seta button{
@@ -272,10 +274,46 @@ section > h1{
 
 }
 
-.left-roses, .left-caneca{
-  margin-right: -90px;
+.carrosel-roses .left-roses, .left-caneca{
+  height: 50px;
+  width: 50px;
+
+  position: absolute;
+  justify-content: space-between;
+  display: flex;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: #D85B95;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: 145px;
+  margin-left: 73%;
 }
 
 .rigth-roses, .rigth-caneca{
-  margin-left: -14px;
+ 
+
+
+  position: absolute;
+  justify-content: space-between;
+  display: flex;
+  font-size: 30px;
+
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: #D85B95;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: 145px;
+  margin-left: -19px;
+}
+
+@media screen and (max-width:1830px) {
+  .carrosel-roses .left-roses, .left-caneca{
+    margin-left: 75%;
+  }
 }
