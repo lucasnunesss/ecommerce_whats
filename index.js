@@ -2,21 +2,15 @@ const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
 let carousel2 = document.querySelector('.product')
-let count = 0
-let count2 = 0
+let count 
 
-const roses2 = document.querySelectorAll('.carrosel-a .product-a')
+(function (){
+count = 0
+} ())
 
 
-function left(){
 
- 
-  
-  const roses = document.querySelectorAll('.carousel roses')
 
-  count++
-  updateCarousel(roses)
-}
 
 function renderProduct(product) {
   const productDiv = document.createElement('div');
@@ -38,48 +32,41 @@ function renderProduct(product) {
 }
 
 function rigth(){
-  const roses = document.querySelectorAll('.id')
+
   count--;
   if (count < 0) {
-    count = carousel.length - 1;
+    count = carousel.length;
   }
- updateCarousel(roses)
 
 }
 
 
-function left2(){
-
-  const roses2 = document.querySelectorAll('.carousel-a .product-a')
-  count2++
-  updateCarousel(roses2)
+function left(){
+  count++
 }
 
 
-function rigth2(){
 
-
-}
 
 
 
 async function updateCarousel(id = carousel, name) {
-  let itens
-  let itens2
-  if (name === 'caneca'){
+  try{
+    let itens
+    let itensIndividual
+    if (name === 'cesta'){
     itens = await fetch('./cestas.json')
-    itens2 = await itens.json()
+    itensIndividual = await itens.json()
   }
 
-  if(name === 'rosas'){
+    if(name === 'rosas'){
     itens = await fetch('./itens.json')
-    itens2 = await itens.json()
+    itensIndividual = await itens.json()
   }
- 
 
   for (let i = 0; i < id.length; i++) {
     const newIndex = count + i;
-    const product = itens2[newIndex % itens2.length]
+    const product = itensIndividual[newIndex % itensIndividual.length]
     const item = id[i];
     item.innerHTML = '';
     if (product) {
@@ -87,52 +74,60 @@ async function updateCarousel(id = carousel, name) {
       item.appendChild(productDiv);  
     }
   }
+  } catch(error){
+    console.log(error)
+  }
+
 }
 
-
-const leftBtn = document.querySelector('.left-roses')
-const rigthBtn = document.querySelector('.rigth-roses')
-  
-leftBtn.addEventListener('click', e => {
-  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
-  updateCarousel(roses, 'rosas')
-  count++
-
-})
-rigthBtn.addEventListener('click', e => {
-  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
-  updateCarousel(roses, 'rosas')
-  count--
-  if (count < 0) {
-    count = carousel.length - 1;
-  }
-
- 
-})
+function clickLeftButton(){
+  const leftBtn = document.querySelectorAll('.left-roses')
   
 
+  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
+  const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
 
-const leftBtna = document.querySelector('.left-caneca')
-const rigthBtna = document.querySelector('.rigth-caneca')
-leftBtna.addEventListener('click', e => {
-  const roses2 = document.querySelectorAll('.carrosel-caneca .product-caneca')
-  updateCarousel(roses2, 'caneca')
-  count++
+  leftBtn.forEach((item) => {
+    item.addEventListener('click', e => {
+      console.log(item.parentElement.id)
+     if(item.id === 'cestaLeft'){
+      console.log('oi')
+      updateCarousel(cesta, 'cesta')
+      left()
+     } 
 
-})
-rigthBtna.addEventListener('click', e => {
-  const roses2 = document.querySelectorAll('.carrosel-caneca .product-caneca')
-  updateCarousel(roses2, 'caneca')
-  count--;
+     if(item.id === 'rosesLeft'){
+      updateCarousel(roses, 'rosas')
+      left()
+     }
+    })
+  })
+}
 
+function clickRigthButton(){
+  const leftBtn = document.querySelectorAll('.rigth-roses')
+  
 
-  if(count < 0){
-    count = 8
-  }
-})
+  const roses = document.querySelectorAll('.carrosel-roses .product-roses')
+  const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
 
-console.log(count)
-updateCarousel(carousel)
+  leftBtn.forEach((item) => {
+    item.addEventListener('click', e => {
+      console.log(item.parentElement.id)
+     if(item.id === 'cestaRigth'){
+      console.log('oi')
+      updateCarousel(cesta, 'cesta')
+      rigth()
+     } 
+
+     if(item.id === 'rigthRoses'){
+      updateCarousel(roses, 'rosas')
+      rigth()
+     }
+    })
+  })
+}
+
 
 
 
@@ -144,3 +139,7 @@ function mostrarNav(){
     showDiv.classList.toggle('showNav')
   })
 }
+
+clickLeftButton()
+clickRigthButton()
+updateCarousel(carousel)
