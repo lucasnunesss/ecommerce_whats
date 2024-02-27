@@ -1,6 +1,6 @@
 [
   {
-    "img": "/img_roses_p/cartao_copia2.jpg",
+    "img": "./img_roses_p/cartao_copia2.jpg",
     "h1": "Buque de flores sortidas",
     "id": 1.1,
     "preco": 75.00
