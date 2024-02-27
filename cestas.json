@@ -1,58 +1,58 @@
 [
  
   {
-    "img": "./img_cesta_p/cesta_fini.png",
-    "h1": "1",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta1_copia.jpg",
+    "h1": "Caixote flor e amor",
+    "id": 2.1,
+    "preco": 140.00
   },
   {
-    "img": "./img_cesta_p/cesta_love6.jpg",
-    "h1": "2",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta2_copia.jpg",
+    "h1": "Cesta amor vermelho",
+    "id": 2.2,
+    "preco": 230.00
   },
   {
-    "img": "./img_cesta_p/cesta_love8.jpg",
-    "h1": "3",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta amor2_copia.png",
+    "h1": "Box Amor de Chocolate",
+    "id": 2.3,
+    "preco": 120.00
   },
   {
-    "img": "./img_cesta_p/cesta_love10.jpg",
-    "h1": "4",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/kit_kat_copia.png",
+    "h1": "Box coração com amor",
+    "id": 2.4,
+    "preco": 92.00
   },
   {
-    "img": "./img_cesta_p/cesta_love9.png",
-    "h1": "5",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta5.avif",
+    "h1": "Box M&M",
+    "id": 2.5,
+    "preco": 150.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "6",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta6.avif",
+    "h1": "Caixote Nutella e Budweiser",
+    "id": 2.6,
+    "preco": 115.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "7",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta7.jpg",
+    "h1": "Box vermelha Bis e kitkat",
+    "id": 2.7,
+    "preco": 119.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "8",
-    "id": 3,
-    "preco": 27
+    "img": "./img/5.jpeg",
+    "h1": "Box Raffaello",
+    "id": 2.8,
+    "preco": 135.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "9",
-    "id": 3,
-    "preco": 27
+    "img": "./img_cesta_p/cesta9.avif",
+    "h1": "Box Ferrero Rocher",
+    "id": 2.9,
+    "preco": 130.00
   },
   {
     "img": "./img_cesta_p/cesta_love12.png",

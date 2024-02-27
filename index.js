@@ -28,7 +28,7 @@ function renderProduct(product) {
     </div>
     <div class="inf">
       <h3 class="title">${product.h1}</h3>
-      <span class="price">R$${product.preco}</span>
+      <span class="price">R$${product.preco.toFixed(2).replace('.', ',')}</span>
       <button>+</button>
      
     </div>
@@ -126,7 +126,7 @@ rigthBtna.addEventListener('click', e => {
   count--;
 
 
-  if(count <= 0){
+  if(count < 0){
     count = 8
   }
 })
