@@ -12,13 +12,22 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'league', sans-serif;
+  transition: .2s linear;
+  text-transform: capitalize;
+ 
+}
 
+html{
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
 }
 
 body{
   background-color: #FAFAFA;
   overflow-x: hidden;
 }
+
+
 
 header{
   display: flex;
@@ -81,7 +90,7 @@ li > .showNav{
   margin-left: -16px;
 
 }
-
+*/
 .showNav > a {
   display: block;
   text-decoration: none;
@@ -177,6 +186,7 @@ section{
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
 }
 
 section > h1{
@@ -189,24 +199,31 @@ section > h1{
 
 
 .carrosel-roses, .carrosel-cesta{
-  width: 1350px;
-  overflow:scroll;
+  width: 89%;
+  overflow:inherit;
   overflow-y: hidden;
   overflow-x: hidden;
   display: flex;
-  padding: 30px 0px;
-  max-width: 75%;
+ 
+  padding: 30px 50px;
+  max-width: 87%;
   margin-top: -1.5em;
+  margin-bottom: 0;
+
 }
 
 .carrosel-roses .product-roses, .carrosel-cesta .product-cesta {
-  width: 400px;
+  margin: 0 2em 0 auto;
+  width: 350px;
+
   box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
   border-radius: 20px;
   background-color: #ffffff;
+ 
+  
 }
 
-.carrosel-roses .product-roses img, .carrosel-cesta .product-cesta img{
+.carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img{
   width: 350px;
   height: 250px;
   object-fit: cover;
@@ -265,7 +282,7 @@ section > h1{
 
 
 .carrosel-roses .seta, .carrosel-cesta .seta{
-  width: 1300px;
+  
   position: absolute;
   justify-content: space-between;
   display: flex;
@@ -294,18 +311,17 @@ section > h1{
   justify-content: space-between;
   display: flex;
   font-size: 30px;
-  width: 50px;
-  height: 50px;
+ 
   border: none;
   background-color: transparent;
   color: #D85B95;
   font-weight: 100;
   cursor: pointer;
   margin-top: 145px;
-  margin-left: 73%;
+  margin-left: 81%;
 }
 
-.rigth-roses, .rigth-cesta{
+.rigth-roses{
  
 
 
@@ -321,13 +337,15 @@ section > h1{
   font-weight: 100;
   cursor: pointer;
   margin-top: 145px;
-  margin-left: -19px;
+  margin-left: -24px;
 }
 
 
 
 @media screen and (max-width:1830px) {
-  .carrosel-roses .left-roses, .left-cesta{
-    margin-left: 75%;
+
+  
+  .carrosel-roses .carrosel-cesta, .left-roses{
+    margin-left: 83%;
   }
 }
