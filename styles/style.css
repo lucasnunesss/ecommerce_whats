@@ -14,7 +14,15 @@
   font-family: 'league', sans-serif;
   transition: .2s linear;
   text-transform: capitalize;
- 
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
 }
 
 html{
@@ -30,53 +38,45 @@ body{
 
 
 header{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  position: fixed;
+  top:0; left:0; right: 0;
   background-color: #D6EDF2;
-  padding: 10px 80px;
-  height: 90px;
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
-  box-shadow: 0px -25px 49px black;
-  width: 100%;
-}
-
-header > .sellva{
- width: 170px;
-  padding-top: 20px;
-}
-
-
-
-ul{
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+} 
 
-  margin-top: 4em;
-  font-weight: 100;
+
+header .navBar{
+  padding-top: 5em;
 }
 
-li{
-  padding: 0 20px;
-  list-style-type: none;
-  cursor: pointer;
-  font-weight: 600;
-  white-space: nowrap;
+.sellva{
+ width: 181px;
+}
+
+
+header .navBar a{
+  font-size: 1rem;
+  padding: 0 6.5rem;
   color: #2d2d2d;
+;
 }
 
-a{
-  text-decoration: none;
-  color: #292828;
-}
-
-ul > li a:hover{
+header .navBar a:hover{
   color:#D85B95;
   transition: 0.3s ease;
+}
+
+
+header > .icons > i{
+  display: block;
+  font-size: 1.4rem;
+  color: #333;
+  margin-right: 3.5rem;
+  margin-top: 4.80rem;
 }
 
 .hide{
@@ -84,13 +84,9 @@ ul > li a:hover{
 }
 
 
-li > .showNav{
-  position: absolute;
-  background-color: #FAFAFA;
-  margin-left: -16px;
 
-}
-*/
+
+
 .showNav > a {
   display: block;
   text-decoration: none;
@@ -101,18 +97,56 @@ li > .showNav{
   margin-right: 2em;
   border-bottom: 1px solid black;
 }
-.main > article{
-  height: 400px;
-  width: 100vw;
-  padding: 10px 80px;
-  display: grid;
-  grid-template-columns: 300px 400px;
-  align-content: center;
-  background-color: rgb(236, 236, 181);
-  justify-content: space-evenly;
-  justify-items: start;
-  z-index: 1;
 
+article{
+  padding: 2rem 9%;
+}
+
+.slide{
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  background: url(../img_roses_p/flor3.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide .content{
+  max-width: 50rem;
+}
+
+.slide .content h3{
+  font-size: 4rem;
+  color: #333;
+}
+
+.slide .content span{
+  font-size: 2rem;
+  color: #c40652b7;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.slide .content p{
+  font-size: 1.5rem;
+  color: black;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: center;
+  background: #333;
+  padding: .9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: white;
+}
+
+.btn:hover{
+  background: #D85B95;
 }
 
 .imagem{
@@ -121,65 +155,10 @@ li > .showNav{
  
 }
 
-article > #textDiv{
-  grid-column: 1;
-  text-align: start;
-  white-space: nowrap;
-}
-
-article > #textDiv > h1{
-  padding-bottom: 1em;
-  font-size: 2em;
-  color: rgb(144, 141, 141);
-  font-weight: 900;
-
-}
-
-#textDiv > h2{
-  color: #D85B95
-}
-
-#textDiv > h4 {
-  padding-bottom: 15px;
-  padding-top: 15px;
-  font-weight:lighter;
- 
-}
-
-#textDiv > button{
-  border: none;
-  background-color: transparent;
-  color: rgb(144, 141, 141);
-  font-size: 1.5em;
-  padding-top: 2em;
-  cursor: pointer;
-}
 
 
-#products{
-  display: grid;
-  grid-template-columns: 200px 300px;
-  grid-column: 2;
-
-  
-}
-.main > article > #products > div >  .prod{
-  width: 100px;
-  grid-column: 2;
-}
 
 
-#lastPro{
-  border: 1px solid black;
-  margin-left: 6em;
-}
-
-.main > h1{
-  margin-top: 2em;
-  text-align: center;
-  color: rgb(98, 98, 98);
-  font-weight: 900;
-}
 
 section{
   display: flex;
@@ -347,5 +326,59 @@ section > h1{
   
   .carrosel-roses .carrosel-cesta, .left-roses{
     margin-left: 83%;
+  }
+}
+
+@media (max-width: 991px){
+  html{
+    font-size: 75%;
+  }
+
+  header{
+    padding: 2rem;
+  }
+
+  article{
+    padding: 2rem;
+  }
+
+  .slide{
+    background-position: left;
+  }
+}
+
+@media (max-width: 768px){
+  header > .sellva{
+    display:none;
+  }
+
+  header .sellva{
+    background-image: url(../img/sellva.png);
+  }
+  header .navBar{
+    position: absolute;
+    top:0%; left:0; right: 0;
+    border-top: .1rem solid rgba(0,0,0, .1);
+ 
+  }
+
+  header .navBar a{
+    margin: 1rem;
+    padding: 1.5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+  }
+
+  .slide .content h3{
+    font-size: 3rem;
+  }
+
+  .slide .content span{
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 450px){
+  html{
+    font-size: 70%;
   }
 }
