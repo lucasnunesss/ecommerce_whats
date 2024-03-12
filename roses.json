@@ -1,0 +1,69 @@
+[
+  {
+    "img": "../img_roses_p/cartao_copia2.jpg",
+    "h1": "Buque de flores sortidas",
+    "id": 1,
+    "preco": 75.00
+  },
+  {
+    "img": "../img/flor.png",
+    "h1": "Mini orquídea na caneca Noite Estrelada",
+    "id": 2,
+    "preco": 80.00
+  },
+  {
+    "img": "../img_roses_p/flor2avif.avif",
+    "h1": "Mini orquídea no cachepô com pezinhos com laço de cetim",
+    "id": 3,
+    "preco": 95.00
+  },
+  {
+    "img": "../img_roses_p/buque.avif",
+    "h1": "Buque 2 rosas e Ferrero Rocher embalado para presente",
+    "id": 4,
+    "preco": 73.00
+  },
+  {
+    "img": "../img_roses_p/flor3.avif",
+    "h1": "Rosa cuidadosamente aberta a mão, embalada para presente",
+    "id": 5,
+    "preco": 25.00
+  },
+  {
+    "img": "../img_roses_p/flor4.avif",
+    "h1": "Buque com duas rosas embalado para presente",
+    "id": 6,
+    "preco": 48.00
+  },
+  {
+    "img": "../img_roses_p/flor5.avif",
+    "h1": "Mini orquídea no vaso de concreto",
+    "id": 7,
+    "preco": 90.00
+  },
+  {
+    "img": "../img_roses_p/flor6.avif",
+    "h1": "Buque com girassol e rosa embalado para presente",
+    "id": 8,
+    "preco": 50.00
+  },
+  {
+    "img": "../img_roses_p/flor7.avif",
+    "h1": "Cesta com arranjo",
+    "id": 9,
+    "preco": 120.00
+  },
+  {
+    "img": "../img_roses_p/flor8.avif",
+    "h1": "Buque girssasol e rosa",
+    "id": 10,
+    "preco": 75.00
+  },
+  {
+    "img": "../img_roses_p/rosa4.jpg",
+    "h1": "Buque de rosas amarelas, brancas e rosa",
+    "id": 11,
+    "preco": 75.00
+  }
+
+]

@@ -1,6 +1,6 @@
 [
   {
-    "img": "./img/caneca.png",
+    "img": "..",
     "h1": "Petalas de Rosa",
     "id": 1,
     "preco": 27

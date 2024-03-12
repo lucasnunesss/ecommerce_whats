@@ -1,0 +1,69 @@
+[
+  {
+    "img": "../img_choco_p/choco1.avif",
+    "h1": "Rosa + Coração com bombons",
+    "id": 41,
+    "preco": 85.00
+  },
+  {
+    "img": "../img_choco_p/choco2.avif",
+    "h1": "Rosa colombiana e Ferrero Rocher",
+    "id": 42,
+    "preco": 70.00
+  },
+  {
+    "img": "../img_choco_p/choco3.avif",
+    "h1": "Caixa enigma harry potter 47g",
+    "id": 43,
+    "preco": 40.00
+  },
+  {
+    "img": "../img_choco_p/chocoj1.jpg",
+    "h1": "Ferrero Rocher",
+    "id": 44,
+    "preco": 45.00
+  },
+  {
+    "img": "../img_choco_p/choco4.avif",
+    "h1": "Ferrero Rocher T3",
+    "id": 45,
+    "preco": 18.00
+  },
+  {
+    "img": "../img_choco_p/choco5.avif",
+    "h1": "Raffaello T3",
+    "id": 46,
+    "preco": 18.00
+  },
+  {
+    "img": "../img_choco_p/choco6.avif",
+    "h1": "Ferrero Rocher T4",
+    "id": 47,
+    "preco": 27.00
+  },
+  {
+    "img": "../img_choco_p/raffaello.jpg",
+    "h1": "Raffaello 90g",
+    "id": 48,
+    "preco": 40.00
+  },
+  {
+    "img": "../img_choco_p/ferrero_collection.jpg",
+    "h1": "Ferrero Colection",
+    "id": 49,
+    "preco": 100.00
+  },
+  {
+    "img": "../img_choco_p/deluxe_caramelo.png",
+    "h1": "Deluxe Caramelo",
+    "id": 50,
+    "preco": 75.00
+  },
+  {
+    "img": "../img_choco_p/lindor_ao_leite.png",
+    "h1": "Lindor ao Leite",
+    "id": 51,
+    "preco": 75.00
+  }
+
+]

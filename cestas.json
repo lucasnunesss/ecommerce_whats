@@ -1,75 +1,68 @@
 [
- 
   {
-    "img": "./img_cesta_p/cesta1_copia.jpg",
+    "img": "../img_cesta_p/cesta1_copia.jpg",
     "h1": "Caixote flor e amor",
-    "id": 2.1,
+    "id": 21,
     "preco": 140.00
   },
   {
-    "img": "./img_cesta_p/cesta2_copia.jpg",
+    "img": "../img_cesta_p/cesta2_copia.jpg",
     "h1": "Cesta amor vermelho",
-    "id": 2.2,
+    "id": 22,
     "preco": 230.00
   },
   {
-    "img": "./img_cesta_p/cesta amor2_copia.png",
+    "img": "../img_cesta_p/cesta amor2_copia.png",
     "h1": "Box Amor de Chocolate",
-    "id": 2.3,
+    "id": 23,
     "preco": 120.00
   },
   {
-    "img": "./img_cesta_p/kit_kat_copia.png",
+    "img": "../img_cesta_p/kit_kat_copia.png",
     "h1": "Box coração com amor",
-    "id": 2.4,
+    "id": 24,
     "preco": 92.00
   },
   {
-    "img": "./img_cesta_p/cesta5.avif",
+    "img": "../img_cesta_p/cesta5.avif",
     "h1": "Box M&M",
-    "id": 2.5,
+    "id": 25,
     "preco": 150.00
   },
   {
-    "img": "./img_cesta_p/cesta6.avif",
+    "img": "../img_cesta_p/cesta6.avif",
     "h1": "Caixote Nutella e Budweiser",
-    "id": 2.6,
+    "id": 26,
     "preco": 115.00
   },
   {
-    "img": "./img_cesta_p/cesta7.jpg",
+    "img": "../img_cesta_p/cesta7.jpg",
     "h1": "Box vermelha Bis e kitkat",
-    "id": 2.7,
+    "id": 27,
     "preco": 119.00
   },
   {
-    "img": "./img/5.jpeg",
+    "img": "../img/5.jpeg",
     "h1": "Box Raffaello",
-    "id": 2.8,
+    "id": 28,
     "preco": 135.00
   },
   {
-    "img": "./img_cesta_p/cesta9.avif",
+    "img": "../img_cesta_p/cesta9.avif",
     "h1": "Box Ferrero Rocher",
-    "id": 2.9,
+    "id": 29,
     "preco": 130.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "10",
-    "id": 3,
-    "preco": 27
+    "img": "../img_cesta_p/cesta10.avif",
+    "h1": "Sacola amor e vinho",
+    "id": 30,
+    "preco": 220.00
   },
   {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "11",
-    "id": 3,
-    "preco": 27
-  },
-  {
-    "img": "./img_cesta_p/cesta_love12.png",
-    "h1": "12",
-    "id": 3,
-    "preco": 27
+    "img": "../img_cesta_p/cesta_paternidade.avif",
+    "h1": "Box Maternidade",
+    "id": 31,
+    "preco": 228.00
   }
 ]
