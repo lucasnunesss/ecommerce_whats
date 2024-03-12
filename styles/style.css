@@ -448,3 +448,11 @@ section > h1{
   background: #def6f4;
   color: black;
 }
+
+i  .contagemItens{
+  display: inline;
+  margin-right: 10px;
+  font-weight: 100;
+  font-size: 1rem;
+  color: #088178;
+}

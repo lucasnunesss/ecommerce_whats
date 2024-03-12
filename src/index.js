@@ -2,10 +2,12 @@ import _ from 'lodash';
 import "../styles/style.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import { individualProduct } from './individual.js';
+import { apertarCar } from './carrinho.js';
 const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
 const carousel2 = document.querySelector('.carrosel')
+
 let count 
 
 
@@ -34,7 +36,7 @@ title.forEach(title => {
 function renderProduct(product) {
   const productDiv = document.createElement('div');
   console.log(product.id)
-
+ 
   productDiv.innerHTML = `
 
     <div class="imagemProduct">
@@ -43,11 +45,10 @@ function renderProduct(product) {
     <div class="inf"">
       <h3 class="title" id="${product.id}">${product.h1}</h3>
       <span class="price">R$${product.preco.toFixed(2).replace('.', ',')}</span>
-      <button>+</button>
-     
+      <button class="btnCarrinho">+</button>
     </div>
-
   `;
+
   return productDiv;
 }
 
@@ -56,7 +57,7 @@ function rigth(){
   if (count < 0) {
     count = 18;
   }
-
+ 
 }
 
 
@@ -65,6 +66,7 @@ function left(){
   if (count > 18){
     count = 0
   }
+
 }
 
 
@@ -73,18 +75,20 @@ function left(){
 
 
 async function updateCarousel(id = carousel, name) {
+ 
   try{
     let itens
     let itensIndividual
     if (name === 'cesta'){
     itens = await fetch('../cestas.json')
     itensIndividual = await itens.json()
-
+    
   }
 
     if(name === 'rosas'){
     itens = await fetch('../roses.json')
     itensIndividual = await itens.json() 
+    
   }
 
     if(name === 'choco'){
@@ -100,19 +104,21 @@ async function updateCarousel(id = carousel, name) {
     if (product) {
       const productDiv = renderProduct(product);
       item.appendChild(productDiv);  
+    
+     
     }
   }
   } catch(error){
     console.log(error)
   }
+  apertarCar()
   loadTitle()
 }
 
 
-
 function clickLeftButton(){
   const leftBtn = document.querySelectorAll('.left-roses')
-  
+
 
   const roses = document.querySelectorAll('.carrosel-roses .product-roses')
   const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
@@ -125,11 +131,13 @@ function clickLeftButton(){
       console.log('oi')
       updateCarousel(cesta, 'cesta')
       left()
+
      } 
 
      if(item.id === 'rosesLeft'){
       updateCarousel(roses, 'rosas')
       left()
+     
      }
 
      if(item.id === 'chocoLeft'){
@@ -143,7 +151,7 @@ function clickLeftButton(){
 function clickRigthButton(){
   const rightBtn = document.querySelectorAll('.rigth-roses')
   
-
+ 
   const roses = document.querySelectorAll('.carrosel-roses .product-roses')
   const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
   const choco = document.querySelectorAll('.carrosel-choco .product-choco')
@@ -154,16 +162,19 @@ function clickRigthButton(){
      if(item.id === 'cestaRigth'){
       updateCarousel(cesta, 'cesta')
       rigth()
+   
      } 
 
      if(item.id === 'rigthRoses'){
       updateCarousel(roses, 'rosas')
       rigth()
+    
      }
 
      if(item.id === 'chocoRigth'){
       updateCarousel(choco, 'choco')
       rigth()
+      
      }
     })
   })
@@ -185,6 +196,7 @@ clickRigthButton()
 clickLeftButton()
 updateCarousel(carousel)
 loadTitle()
+
 
 
 
