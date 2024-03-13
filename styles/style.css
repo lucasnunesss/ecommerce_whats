@@ -332,7 +332,7 @@ section > h1{
 
   
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
-    margin-left: 83%;
+    margin-left: 82%;
   }
 }
 
@@ -375,6 +375,10 @@ section > h1{
     border: .1rem solid rgba(0,0,0,.1);
   }
 
+  .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
+    margin-left: 80%;
+  }
+
   .slide .content h3{
     font-size: 3rem;
   }
@@ -384,9 +388,13 @@ section > h1{
   }
 }
 
-@media (max-width: 450px){
+@media (max-width: 650px){
   html{
     font-size: 70%;
+  }
+
+  .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
+    margin-left: 78%;
   }
 }
 

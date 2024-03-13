@@ -2,7 +2,7 @@ import _ from 'lodash';
 import "../styles/style.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import { individualProduct } from './individual.js';
-import { apertarCar } from './carrinho.js';
+import { apertarCar, remover } from './carrinho.js';
 const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
@@ -20,6 +20,7 @@ count = 0
 
 function loadTitle(){
   const title = document.querySelectorAll('.title')
+
 title.forEach(title => {
   title.addEventListener('click', (e) => {
     const productIdURL = title.id;
@@ -72,10 +73,8 @@ function left(){
 
 
 
-
-
 async function updateCarousel(id = carousel, name) {
- 
+
   try{
     let itens
     let itensIndividual
@@ -131,7 +130,6 @@ function clickLeftButton(){
       console.log('oi')
       updateCarousel(cesta, 'cesta')
       left()
-
      } 
 
      if(item.id === 'rosesLeft'){
@@ -150,7 +148,7 @@ function clickLeftButton(){
 
 function clickRigthButton(){
   const rightBtn = document.querySelectorAll('.rigth-roses')
-  
+    
  
   const roses = document.querySelectorAll('.carrosel-roses .product-roses')
   const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
@@ -196,7 +194,5 @@ clickRigthButton()
 clickLeftButton()
 updateCarousel(carousel)
 loadTitle()
-
-
 
 
