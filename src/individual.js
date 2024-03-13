@@ -1,6 +1,7 @@
 import "../styles/style.css";
 
 
+
 const urlParams = new URLSearchParams(window.location.search);
 const productId = urlParams.get('id') ;
 const imagem = document.createElement('img');
@@ -58,6 +59,7 @@ function individualProduct() {
 
 window.onload = () => {
   individualProduct();
+  
 };
 
 

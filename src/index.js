@@ -2,7 +2,7 @@ import _ from 'lodash';
 import "../styles/style.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import { individualProduct } from './individual.js';
-import { apertarCar, remover } from './carrinho.js';
+import { apertarCar, carregarCount, remover } from './carrinho.js';
 const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
