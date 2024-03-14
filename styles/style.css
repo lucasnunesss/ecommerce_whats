@@ -33,7 +33,7 @@ html{
 body{
   background-color: #FAFAFA;
   overflow-x: hidden;
-  
+  max-width: 100%;
 }
 
 
@@ -391,17 +391,20 @@ section > h1{
 @media (min-width: 150px) and (max-width: 768px){
   *{
   
-   
+ 
   }
   body{
-
-    
+   background-color: #FFFFFF;
+   
   }
   html{
     font-size: 70%;
-  
+   
   }
 
+  section{
+    background-color: #FFFFFF;
+  }
  
   .carrosel-roses, .carrosel-cesta, .carrosel-choco{
     
@@ -418,7 +421,7 @@ section > h1{
   
   .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
     margin: 0 2em 0 auto;
-    width: 500px;
+    width: 600px;
     padding-right: 60px;
     box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
     border-radius: 20px;
