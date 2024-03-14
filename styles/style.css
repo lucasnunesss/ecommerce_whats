@@ -395,14 +395,12 @@ section > h1{
   }
 
   section{
-    display: flex;
-    max-width: 500px;
-    flex-direction: column;
+    display: block;
   }
 
-  section{
-   
-  }
+ 
+
+ 
   
   
   .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
@@ -420,7 +418,7 @@ section > h1{
 
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 77%;
-    color: rgb(46, 113, 117);
+    color: rgb(69, 37, 177);
   }
 
   .rigth-roses{
