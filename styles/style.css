@@ -393,8 +393,23 @@ section > h1{
     font-size: 70%;
   }
 
+  section{
+    display: flex;
+ 
+    flex-direction: column;
+   
+  
+  }
+  
+  
+ 
+
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 77%;
+  }
+
+  .rigth-roses{
+    margin-left: -57px;
   }
 }
 
