@@ -389,27 +389,33 @@ section > h1{
 }
 
 @media (min-width: 150px) and (max-width: 768px){
+  body{
+    max-width: 100%;
+    overflow:inherit;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
   html{
     font-size: 70%;
-    max-width: 100%;
+    width: 100%;
   }
 
   section{
-    display: block;
+    
+   
   }
 
  
-
+ 
  
   
   
-  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
-    margin: 0 2em 0 auto;
-    width: 350px;
- 
-    box-shadow: 0 0 10px 5px rgba(0,0,0,0.1);
-    border-radius: 20px;
-    background-color: #ffffff;
+  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco{
+   
+    margin: 2em;
+    max-width: 100%;
+   
+   
    
     
   }
@@ -418,7 +424,7 @@ section > h1{
 
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 77%;
-    color: rgb(69, 37, 177);
+    color: rgb(235, 255, 19);
   }
 
   .rigth-roses{
