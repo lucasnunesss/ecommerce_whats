@@ -390,7 +390,7 @@ section > h1{
 
 @media (min-width: 150px) and (max-width: 768px){
   *{
-  
+    box-sizing: content-box;
  
   }
   body{
@@ -432,7 +432,11 @@ section > h1{
   }
   
  #roses{
-  background-color: #FFFFFF;;
+  background-color: #FFFFFF;
+  width: 100vw;
+  overflow:visible;
+  overflow-y:visible;
+  overflow-x: visible;
  }
  
   
@@ -443,11 +447,11 @@ section > h1{
 
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 87%;
-    color: rgb(3, 3, 8);
+  
   }
 
   .rigth-roses{
-    display: none;
+    margin-left: 67px;
   }
 }
 
