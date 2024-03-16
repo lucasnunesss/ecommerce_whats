@@ -52,18 +52,23 @@ header{
 
 header .navBar{
   padding-top: 5em;
+
+  display: flex;
+  justify-content: center;
 }
 
-.sellva{
- width: 181px;
+.sellva {
+ width: 171px;
+ background-color: #fcda52;
+ margin-left: 70px;
 }
 
 
 header .navBar a{
   font-size: 1rem;
-  padding: 0 6.5rem;
+  padding: 34px 6rem 0;
   color: #2d2d2d;
-;
+ 
 }
 
 header .navBar a:hover{
@@ -74,17 +79,19 @@ header .navBar a:hover{
 
 header > .icons > i{
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #333;
   margin-right: 3.5rem;
-  margin-top: 4.80rem;
+  margin-top: 6.8rem;
 }
 
 .hide{
   display: none;
 }
 
-
+.bi.bi-list{
+  display: none;
+}
 
 
 
@@ -332,7 +339,7 @@ section > h1{
 
   
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
-    margin-left: 82%;
+    margin-left: 87%;
   }
 }
 
@@ -402,6 +409,55 @@ section > h1{
    
   }
   
+  
+
+  header{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  header .navBar{
+    display: none;
+    background-color: none;
+    
+
+  }
+
+
+
+
+
+  header > .icons i{
+    height: 35px;
+  width: 45px;
+  border-radius: 50%;
+  display: inline-block;
+    position: fixed;
+    padding-top: 10px ;
+    left: 85%;
+    
+    bottom: 90%;
+   
+    border-radius: 50px;
+  }
+
+  
+  .bi.bi-cart{
+    text-align: center;
+  
+  }
+
+  header > .bi.bi-list{
+    display: inline-block;
+    position: fixed;
+    right: 90%;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 2.5em;
+    bottom: 92%;
+    cursor: pointer;
+  }
+
   section, #roses{
     background-color: #FFFFFF;
   
@@ -423,7 +479,7 @@ section > h1{
     margin: 0 2em 0 -1em;
     width: 600px;
     padding-right: 60px;
-    padding-left: 60px;
+    padding-left: 30px;
     box-shadow: none;
     border-radius: 20px;
   
@@ -443,18 +499,44 @@ section > h1{
   
 
   
- 
 
-  .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
-    margin-left: 96%;
-  
-  }
 
-  .rigth-roses{
-    margin-left: 37px;
-  }
+.carrosel-roses .carrosel-cesta .carrosel-choco,.left-roses{
+  height: 50px;
+  width: 50px;
+
+
+
+  display: block;
+  font-size: 30px;
+
+  border: none;
+  background-color: transparent;
+  color: #D85B95;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: -40px;
+  margin-left: 96%;
 }
 
+  .rigth-roses{
+    display: block;
+    margin-left: 40px;
+    margin-top: -40px;
+  }
+
+  header > .show{
+    display: block;
+    margin-top: -10px;
+  }
+
+  header > .show a {
+    margin-top: -10px;
+    margin-left: -10px;
+    display: block;
+    background-color: #fcda52;
+  }
+}
 
 
 /* INDIVIDUAL PRODUCTS */

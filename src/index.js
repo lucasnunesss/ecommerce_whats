@@ -7,7 +7,7 @@ const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
 const carousel2 = document.querySelector('.carrosel')
-
+const navBar = document.querySelector('.bi.bi-list')
 let count 
 
 
@@ -189,6 +189,19 @@ function mostrarNav(){
     showDiv.classList.toggle('showNav')
   })
 }
+
+navBar.addEventListener('click', e => {
+  const nav = document.querySelector('.navBar')
+  const header = document.querySelector('header')
+  nav.classList.toggle('show')
+  if(nav.classList.contains('show')){
+    nav.style.display = 'block'
+  } else {
+    nav.style.display = 'none'
+    header.style.backgroundColor = 'transparent'
+  }
+  
+})
 
 clickRigthButton()
 clickLeftButton()
