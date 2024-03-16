@@ -527,7 +527,7 @@ section > h1{
 
   header > .show{
     display: block;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   header > .show a {
