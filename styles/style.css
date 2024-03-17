@@ -77,12 +77,13 @@ header .navBar a:hover{
 }
 
 
-header > .icons > i{
+header > .icons > .bi.bi-cart{
   display: block;
   font-size: 1.3rem;
   color: #333;
   margin-right: 3.5rem;
   margin-top: 6.8rem;
+  cursor: pointer;
 }
 
 .hide{
@@ -333,7 +334,20 @@ section > h1{
   margin-left: -34px;
 }
 
+.divCart{
+  display: grid;
+  width: 400px;
+  background-color: #353432;
+  color: #eee;
+  position: fixed;
+  inset: 0 0 0 auto;
+  grid-template-rows: 70px 1fr 70px;
+}
 
+
+.dis{
+  display: none;
+}
 
 @media screen and (max-width:1830px) {
 
@@ -395,7 +409,7 @@ section > h1{
   }
 }
 
-@media (min-width: 281px) and (max-width: 768px){
+@media (min-width: 301px) and (max-width: 768px){
   *{
     box-sizing: content-box;
  
@@ -444,17 +458,17 @@ section > h1{
   
   .bi.bi-cart{
     text-align: center;
-  
+    
   }
 
   header > .bi.bi-list{
     display: block;
     position: fixed;
-    right: 95%;
+    right: 90%;
     color: rgb(0, 0, 0);
     font-weight: 900;
     font-size: 2.5em;
-    bottom: 92%;
+    bottom: 88%;
     cursor: pointer;
     padding-bottom: 30px;
   }
@@ -532,14 +546,14 @@ section > h1{
   color: #D85B95;
   font-weight: 100;
   cursor: pointer;
-  margin-top: -40px;
-  margin-left: 96%;
+  margin-top: -50px;
+  margin-left: 70%;
 }
 
   .rigth-roses{
     display: block;
-    margin-left: 40px;
-    margin-top: -40px;
+    margin-left: 30%;
+    margin-top: -50px;
   }
 
   header > .show{
@@ -558,7 +572,7 @@ section > h1{
     background-color: #fcda52;
   }
 }
-@media (max-width: 290px){
+@media (min-width: 100px) and (max-width: 300px){
 
   header > .bi.bi-list{
     display: block;
@@ -597,7 +611,168 @@ section > h1{
 }
 
   .inf{
-    margin-left: 2em;
+    margin-left: 0em;
+  }
+
+  *{
+    box-sizing: content-box;
+ 
+  }
+  body{
+ 
+   
+  }
+  html{
+    font-size: 70%;
+   
+  }
+  
+  
+
+  header{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  header .navBar{
+    display: none;
+    background-color: none;
+    
+
+  }
+
+
+
+
+
+  header > .icons i{
+    height: 35px;
+  width: 45px;
+  border-radius: 50%;
+  display: inline-block;
+    position: fixed;
+    padding-top: 10px ;
+    left: 85%;
+    
+    bottom: 90%;
+   
+    border-radius: 50px;
+  }
+
+  
+  .bi.bi-cart{
+    text-align: center;
+    
+  }
+
+  header > .bi.bi-list{
+    display: block;
+    position: fixed;
+    right: 90%;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 2.5em;
+    bottom: 86%;
+    
+    cursor: pointer;
+    padding-bottom: 30px;
+  }
+
+  section, #roses{
+    background-color: #FFFFFF;
+  
+  }
+ 
+  .carrosel-roses, .carrosel-cesta, .carrosel-choco{
+    
+    overflow:hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    padding: 30px 100px  0px 0px;
+    margin-top: -1.5em;
+    margin-bottom: 0;
+  
+  }
+  
+  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
+    margin: 0 2em 0 -2em;
+    width: 600px;
+    padding-right: 60px;
+    padding-left: 40px;
+    box-shadow: none;
+    border-radius: 20px;
+  
+    background-color: #FFFFFF;
+    
+  }
+  
+ #roses{
+  background-color: #FFFFFF;
+  width: 100vw;
+  overflow:visible;
+  overflow-y:visible;
+  overflow-x: visible;
+ }
+ 
+  
+ .carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
+  max-width: 350px;
+  height: 250px;
+  object-fit:cover;
+  margin-left: 0em;
+  border-radius: 20px;
+}
+
+
+  
+.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price{
+  font-size: 15px;
+  font-weight:lighter;
+  color: rgb(58, 58, 58);
+  margin-top: 5px;
+  
+}
+
+
+.carrosel-roses .carrosel-cesta .carrosel-choco,.left-roses{
+  height: 50px;
+  width: 50px;
+
+
+
+  display: block;
+  font-size: 30px;
+
+  border: none;
+  background-color: transparent;
+  color: #D85B95;
+  font-weight: 100;
+  cursor: pointer;
+  margin-top: -50px;
+  margin-left: 96%;
+}
+
+  .rigth-roses{
+    display: block;
+    margin-left: 40px;
+    margin-top: -50px;
+  }
+
+  header > .show{
+    display: block;
+    
+  }
+
+  
+
+  header > .show a{
+    padding-top: 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+    display: block;
+    width: 300px;
+    background-color: #fcda52;
   }
 }
 
