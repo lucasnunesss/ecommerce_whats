@@ -395,7 +395,7 @@ section > h1{
   }
 }
 
-@media (min-width: 150px) and (max-width: 768px){
+@media (min-width: 281px) and (max-width: 768px){
   *{
     box-sizing: content-box;
  
@@ -448,14 +448,15 @@ section > h1{
   }
 
   header > .bi.bi-list{
-    display: inline-block;
+    display: block;
     position: fixed;
-    right: 90%;
+    right: 95%;
     color: rgb(0, 0, 0);
     font-weight: 900;
     font-size: 2.5em;
     bottom: 92%;
     cursor: pointer;
+    padding-bottom: 30px;
   }
 
   section, #roses{
@@ -496,9 +497,25 @@ section > h1{
  }
  
   
-  
+ .carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
+  max-width: 450px;
+  height: 350px;
+  object-fit:cover;
+  margin-left: 5em;
+  border-radius: 20px;
+}
 
+.inf{
+  margin-left: 5em;
+}
   
+.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price{
+  font-size: 15px;
+  font-weight:lighter;
+  color: rgb(58, 58, 58);
+  margin-top: 5px;
+  
+}
 
 
 .carrosel-roses .carrosel-cesta .carrosel-choco,.left-roses{
@@ -527,14 +544,60 @@ section > h1{
 
   header > .show{
     display: block;
-    margin-top: 10px;
+    
   }
 
-  header > .show a {
+  
+
+  header > .show a{
+    padding-top: 10px;
     margin-top: -10px;
     margin-left: -10px;
     display: block;
+    width: 300px;
     background-color: #fcda52;
+  }
+}
+@media (max-width: 290px){
+
+  header > .bi.bi-list{
+    display: block;
+    position: fixed;
+    right: 90%;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 2.5em;
+    bottom: 86%;
+    cursor: pointer;
+    padding-bottom: 30px;
+  }
+
+  header > .show a {
+    width: 100px;
+  }
+
+  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
+    margin: 0 2em 0 -1em;
+    width: 400px;
+    padding-right: 0px;
+    padding-left: 0px;
+    box-shadow: none;
+    border-radius: 20px;
+  
+    background-color: #FFFFFF;
+    
+  }
+
+  .carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
+    max-width: 350px;
+    height: 250px;
+    object-fit:cover;
+    border-radius: 20px;
+    margin: 0;
+}
+
+  .inf{
+    margin-left: 2em;
   }
 }
 
