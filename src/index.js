@@ -109,7 +109,7 @@ async function updateCarousel(id = carousel, name) {
   } catch(error){
     console.log(error)
   }
- 
+  apertarCar()
   loadTitle()
 }
 
@@ -207,5 +207,5 @@ clickRigthButton()
 clickLeftButton()
 updateCarousel(carousel)
 loadTitle()
-apertarCar()
+
 
