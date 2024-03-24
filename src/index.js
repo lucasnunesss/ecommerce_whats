@@ -2,14 +2,13 @@ import _ from 'lodash';
 import "../styles/style.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import { individualProduct } from './individual.js';
-import { apertarCar, carregarCount, remover } from './carrinho.js';
+import { apertarCar, carregarItens } from './carrinho.js';
 const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
 const carousel2 = document.querySelector('.carrosel')
 const navBar = document.querySelector('.bi.bi-list')
 let count 
-
 
 
 
@@ -20,7 +19,7 @@ count = 0
 
 function loadTitle(){
   const title = document.querySelectorAll('.title')
-
+ 
 title.forEach(title => {
   title.addEventListener('click', (e) => {
     const productIdURL = title.id;
@@ -87,7 +86,7 @@ async function updateCarousel(id = carousel, name) {
     if(name === 'rosas'){
     itens = await fetch('../roses.json')
     itensIndividual = await itens.json() 
-    
+
   }
 
     if(name === 'choco'){
@@ -99,18 +98,18 @@ async function updateCarousel(id = carousel, name) {
     const newIndex = count + i;
     const product = itensIndividual[newIndex % itensIndividual.length] 
     const item = id[i];
+    
     item.innerHTML = '';
     if (product) {
       const productDiv = renderProduct(product);
       item.appendChild(productDiv);  
-    
      
     }
   }
   } catch(error){
     console.log(error)
   }
-  apertarCar()
+ 
   loadTitle()
 }
 
@@ -144,6 +143,7 @@ function clickLeftButton(){
      }
     })
   })
+
 }
 
 function clickRigthButton(){
@@ -207,5 +207,5 @@ clickRigthButton()
 clickLeftButton()
 updateCarousel(carousel)
 loadTitle()
-
+apertarCar()
 

@@ -336,13 +336,79 @@ section > h1{
 
 .divCart{
   display: grid;
-  width: 400px;
-  background-color: #353432;
+  width: 500px;
+  height: 200px;
   color: #eee;
   position: fixed;
-  inset: 0 0 0 auto;
-  grid-template-rows: 70px 1fr 70px;
+  inset: 130px 0 0 auto;
+  grid-template-rows: 1fr 7px;
+  z-index: 1000;
+  transition: .5s;
+  background-color: #555;
+  padding: 10px;
 }
+
+
+
+.divCart .btnCar{
+  grid-row: 3;
+}
+
+.divCart .btnCar button{
+  background-color: #E8BC0E;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  
+}
+
+.divCart .listCart .itens img{
+  width: 100%;
+
+}
+
+.itens .name .totalPrice{
+  color: black;
+}
+
+.divCart .listCart .itens{
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  background-color: #def6f4;
+  color: black;
+}
+
+.listCart .quantidade span{
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*
+.listCart .quantidade span:nth-child(2){
+  background-color: transparent;
+ color: black;
+}
+
+.listCart .itens:nth-child(even){
+  background-color: #eee1;
+}
+
+.listCart{
+  overflow: auto;
+}
+
+.listCart::-webkit-scrollbar{
+  width: 0;
+}
+*/
 
 
 .dis{
@@ -355,12 +421,56 @@ section > h1{
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 87%;
   }
-}
 
-@media (max-width: 991px){
+  * {
+    box-sizing: content-box;
+  }
   html{
     font-size: 75%;
   }
+
+  .carrosel-roses,
+  .carrosel-cesta,
+  .carrosel-choco {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x:scroll;
+    padding: 30px 0px 0px 0px; /* Adjusted padding */
+   
+  }
+}
+
+@media (max-width: 991px){
+  * {
+    box-sizing: content-box;
+  }
+  html{
+    font-size: 75%;
+  }
+
+  .carrosel-roses,
+  .carrosel-cesta,
+  .carrosel-choco {
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x:scroll;
+    padding: 30px 0px 0px 0px; /* Adjusted padding */
+    margin-top: -1.5em;
+    margin-bottom: 0;
+  }
+
+  .carrosel-roses .product-roses,
+  .carrosel-cesta .product-cesta,
+  .carrosel-choco .product-choco {
+    margin: 0 5% 0 -20px; /* Adjusted margin */
+    padding-right: 0px;
+    padding-left: 20px;
+    max-width: 100%; /* Added maximum width */
+    box-shadow: none;
+    border-radius: 20px;
+    background-color: #ffffff;
+  }
+
 
   header{
     padding: 2rem;
@@ -380,6 +490,11 @@ section > h1{
     display:none;
   }
 
+  
+  body{
+    overflow-x:scroll;
+  }
+
   header .sellva{
     background-image: url(../img/sellva.png);
   }
@@ -396,6 +511,7 @@ section > h1{
     border: .1rem solid rgba(0,0,0,.1);
   }
 
+  
   .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
     margin-left: 80%;
   }
@@ -409,369 +525,123 @@ section > h1{
   }
 }
 
-@media (min-width: 450px) and (max-width: 768px){
-  *{
+@media (min-width: 100px) and (max-width: 780px) {
+  * {
     box-sizing: content-box;
- 
-  }
-  body{
- 
-   
-  }
-  html{
-    font-size: 70%;
-   
-  }
-  
-  
 
-  header{
+  }
+  body {
+    /* Add any necessary styles for the body */
+    
+  }
+  html {
+    font-size: 70%;
+  }
+  header {
     background-color: transparent;
     border: none;
     box-shadow: none;
   }
-  header .navBar{
+  header .navBar {
     display: none;
     background-color: none;
-    
-
   }
-
-
-
-
-
-  header > .icons i{
+  header > .icons i {
     height: 35px;
-  width: 45px;
-  border-radius: 50%;
-  display: inline-block;
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
     position: fixed;
-    padding-top: 10px ;
+    padding-top: 10px;
     left: 85%;
-    
     bottom: 90%;
-   
     border-radius: 50px;
   }
-
-  
-  .bi.bi-cart{
+  .bi.bi-cart {
     text-align: center;
-    
   }
-
-  header > .bi.bi-list{
+  header > .bi.bi-list {
     display: block;
     position: fixed;
     right: 90%;
     color: rgb(0, 0, 0);
     font-weight: 900;
     font-size: 2.5em;
-    bottom: 88%;
+    bottom: 86%; /* Adjusted bottom position */
     cursor: pointer;
     padding-bottom: 30px;
   }
-
-  section, #roses{
-    background-color: #FFFFFF;
-  
+  section,
+  #roses {
+    background-color: #ffffff;
   }
- 
-  .carrosel-roses, .carrosel-cesta, .carrosel-choco{
-    
-    overflow:hidden;
+  .carrosel-roses,
+  .carrosel-cesta,
+  .carrosel-choco {
+    overflow: hidden;
     overflow-y: hidden;
-    overflow-x: hidden;
-    width: 100%;
-    padding: 30px 100px  0px 0px;
+    overflow-x:scroll;
+    padding: 30px 100px 0px 0px; /* Adjusted padding */
     margin-top: -1.5em;
     margin-bottom: 0;
-  
   }
-  
-  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
-    margin: 0 2em 0 -1em;
-    width: 600px;
-    padding-right: 60px;
-    padding-left: 40px;
+  .carrosel-roses .product-roses,
+  .carrosel-cesta .product-cesta,
+  .carrosel-choco .product-choco {
+    margin: 0 15% 0 -20px; /* Adjusted margin */
+    padding-right: 0px;
+    padding-left: 30px;
+    max-width: 100%; /* Added maximum width */
     box-shadow: none;
     border-radius: 20px;
-  
-    background-color: #FFFFFF;
-    
+    background-color: #ffffff;
   }
-  
- #roses{
-  background-color: #FFFFFF;
-  width: 100vw;
-  overflow:visible;
-  overflow-y:visible;
-  overflow-x: visible;
- }
+  .carrosel-roses .product-roses .inf .title,
+  .carrosel-cesta .product-cesta .inf .title,
+  .carrosel-choco .product-choco .inf {
+    font-size: 1.2em;
+    text-align: start;
+    
+    margin: 0;
+  }
+  .carrosel-roses .product-roses .inf .price,
+  .carrosel-cesta .product-cesta .inf .price,
+  .carrosel-choco .product-choco .inf .price {
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(58, 58, 58);
+    margin-top: 5px;
+  }
+  .carrosel-roses .product-roses img,
+  .carrosel-cesta .product-cesta img,
+  .carrosel-choco .product-choco img {
+    
  
-  
- .carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
-  max-width: 450px;
-  height: 350px;
-  object-fit:cover;
-  margin-left: 5em;
-  border-radius: 20px;
-}
-
-.inf{
-  margin-left: 5em;
-}
-  
-.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price{
-  font-size: 15px;
-  font-weight:lighter;
-  color: rgb(58, 58, 58);
-  margin-top: 5px;
-  
-}
-
-
-.carrosel-roses .carrosel-cesta .carrosel-choco,.left-roses{
-  height: 50px;
-  width: 50px;
-
-
-
-  display: block;
-  font-size: 30px;
-
-  border: none;
-  background-color: transparent;
-  color: #D85B95;
-  font-weight: 100;
-  cursor: pointer;
-  margin-top: -50px;
-  margin-left: 70%;
-}
-
-  .rigth-roses{
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .left-roses {
+    height: 50px;
+    width: 50px;
     display: block;
-    margin-left: 30%;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    color: #d85b95;
+    font-weight: 100;
+    cursor: pointer;
+    margin-top: -50px;
+    margin-left: 70%;
+  }
+  .rigth-roses {
+    display: block;
+    margin-left: 120px; /* Adjusted margin-left */
     margin-top: -50px;
   }
-
-  header > .show{
+  header > .show {
     display: block;
-    
   }
-
-  
-
-  header > .show a{
-    padding-top: 10px;
-    margin-top: -10px;
-    margin-left: -10px;
-    display: block;
-    width: 300px;
-    background-color: #fcda52;
-  }
-}
-
-
-
-
-@media (min-width: 100px) and (max-width: 449px){
-
-  header > .bi.bi-list{
-    display: block;
-    position: fixed;
-    right: 90%;
-    color: rgb(0, 0, 0);
-    font-weight: 900;
-    font-size: 2.5em;
-    bottom: 86%;
-    cursor: pointer;
-    padding-bottom: 30px;
-  }
-
   header > .show a {
-    width: 100px;
-  }
-
-  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
-    margin: 0 2em 0 -1em;
-    max-width: 100%;
-    padding-right: 0px;
-    padding-left: 0px;
-    box-shadow: none;
-    border-radius: 20px;
-  
-    background-color: #FFFFFF;
-    
-  }
-
-
- 
-  
-
-  .inf{
-    margin-left: 0em;
-  }
-
-  *{
-    box-sizing: content-box;
- 
-  }
-  body{
- 
-   
-  }
-  html{
-    font-size: 70%;
-   
-  }
-  
-  
-
-  header{
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-  header .navBar{
-    display: none;
-    background-color: none;
-    
-
-  }
-
-
-
-
-
-  header > .icons i{
-    height: 35px;
-  width: 45px;
-  border-radius: 50%;
-  display: inline-block;
-    position: fixed;
-    padding-top: 10px ;
-    left: 85%;
-    
-    bottom: 90%;
-   
-    border-radius: 50px;
-  }
-
-  
-  .bi.bi-cart{
-    text-align: center;
-    
-  }
-
-  header > .bi.bi-list{
-    display: block;
-    position: fixed;
-    right: 90%;
-    color: rgb(0, 0, 0);
-    font-weight: 900;
-    font-size: 2.5em;
-    bottom: 86%;
-    
-    cursor: pointer;
-    padding-bottom: 30px;
-  }
-
-  section, #roses{
-    background-color: #FFFFFF;
-  
-  }
- 
-  .carrosel-roses, .carrosel-cesta, .carrosel-choco{
-   
-    overflow:hidden;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    
-    padding: 30px 100px  0px 0px;
-    margin-top: -1.5em;
-    margin-bottom: 0;
-  
-  }
-  
-  .carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
-    margin: 0 2em 0 -2em;
-  
-    padding-right: 0px;
-    padding-left: 60px;
-    box-shadow: none;
-    border-radius: 20px;
-  
-    background-color: #FFFFFF;
-    
-  }
-  
- #roses{
-  background-color: #FFFFFF;
-  width: 100vw;
-  overflow:visible;
-  overflow-y:visible;
-  overflow-x: visible;
- }
- 
-  
- .carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
-  max-width: 100%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-
-  
-  border-radius: 20px;
-}
-
-
-
-
-
-  
-.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price{
-  font-size: 15px;
-  font-weight:lighter;
-  color: rgb(58, 58, 58);
-  margin-top: 5px;
-  
-}
-
-
-.carrosel-roses .carrosel-cesta .carrosel-choco,.left-roses{
-  height: 50px;
-  width: 50px;
-
-
-
-  display: block;
-  font-size: 30px;
-
-  border: none;
-  background-color: transparent;
-  color: #D85B95;
-  font-weight: 100;
-  cursor: pointer;
-  margin-top: -50px;
-  margin-left: 70%;
-}
-
-  .rigth-roses{
-    display: block;
-    margin-left: 120px;
-    margin-top: -50px;
-  }
-
-  header > .show{
-    display: block;
-    
-  }
-
-  
-
-  header > .show a{
     padding-top: 10px;
     margin-top: -10px;
     margin-left: -10px;
@@ -779,14 +649,8 @@ section > h1{
     width: 300px;
     background-color: #fcda52;
   }
-
-  
-
-  .carrosel-roses .product-roses .inf .title, .carrosel-cesta .product-cesta .inf .title, .carrosel-choco .product-choco .inf{
-    font-size: 1.3em;
-    
-  }
 }
+
 
 
 /* INDIVIDUAL PRODUCTS */

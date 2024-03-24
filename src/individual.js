@@ -1,5 +1,5 @@
 import "../styles/style.css";
-
+import { carregarItens } from "./carrinho";
 
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -34,7 +34,7 @@ function individualProduct() {
               const section = document.querySelector('.singleProductImage');
               section.appendChild(imagem);
               console.log(imagem);
-              
+           
               singleProduct.innerHTML = `  <h6></h6>
               <h4>${item.h1}</h4>
               <h2>R$${item.preco.toFixed(2).replace('.', ',')}</h2>
@@ -59,7 +59,7 @@ function individualProduct() {
 
 window.onload = () => {
   individualProduct();
-  
+  carregarItens()
 };
 
 
