@@ -457,6 +457,7 @@ section > h1{
     padding: 30px 0px 0px 0px; /* Adjusted padding */
     margin-top: -1.5em;
     margin-bottom: 0;
+    text-align: center;
   }
 
   .carrosel-roses .product-roses,
@@ -469,6 +470,7 @@ section > h1{
     box-shadow: none;
     border-radius: 20px;
     background-color: #ffffff;
+    text-align: center;
   }
 
 
@@ -600,7 +602,7 @@ section > h1{
   .carrosel-cesta .product-cesta .inf .title,
   .carrosel-choco .product-choco .inf {
     font-size: 1.2em;
-    text-align: start;
+    text-align: center;
     
     margin: 0;
   }
@@ -611,12 +613,13 @@ section > h1{
     font-weight: lighter;
     color: rgb(58, 58, 58);
     margin-top: 5px;
+    text-align: center;
   }
   .carrosel-roses .product-roses img,
   .carrosel-cesta .product-cesta img,
   .carrosel-choco .product-choco img {
-    
- 
+    height: 200px;
+    width: 200px;
     object-fit: cover;
     border-radius: 20px;
   }
@@ -631,13 +634,15 @@ section > h1{
     font-weight: 100;
     cursor: pointer;
     margin-top: -50px;
-    margin-left: 70%;
+    margin-left: 90%; /* Ajuste o valor de margin-left conforme necessário */
   }
+  
   .rigth-roses {
     display: block;
-    margin-left: 120px; /* Adjusted margin-left */
+    margin-left: 10%; /* Ajuste o valor de margin-left conforme necessário */
     margin-top: -50px;
   }
+  
   header > .show {
     display: block;
   }
