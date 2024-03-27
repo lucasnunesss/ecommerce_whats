@@ -186,7 +186,7 @@ section > h1{
 }
 
 
-.carrosel-roses, .carrosel-cesta, .carrosel-choco{
+.carrosel-roses, .carrosel-cesta, .carrosel-choco, .carrosel-pelucia{
   width: 89%;
   overflow:inherit;
   overflow-y: hidden;
@@ -200,7 +200,7 @@ section > h1{
 
 }
 
-.carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco {
+.carrosel-roses .product-roses, .carrosel-cesta .product-cesta, .carrosel-choco .product-choco, .carrosel-pelucia .product-pelucia {
   margin: 0 2em 0 auto;
   width: 350px;
 
@@ -211,7 +211,7 @@ section > h1{
   
 }
 
-.carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img{
+.carrosel-roses  .product-roses img, .carrosel-cesta .product-cesta img, .carrosel-choco .product-choco img, .carrosel-pelucia .product-pelucia img{
   width: 350px;
   height: 250px;
   object-fit: cover;
@@ -231,7 +231,7 @@ section > h1{
 }
 
 
-.carrosel-roses .product-roses .inf, .carrosel-cesta .product-cesta .inf, .carrosel-choco .product-choco .inf{
+.carrosel-roses .product-roses .inf, .carrosel-cesta .product-cesta .inf, .carrosel-choco .product-choco .inf, .carrosel-pelucia .product-pelucia .inf{
   padding: 20px 30px;
   margin-top: -10px;
   display: flex;
@@ -242,7 +242,7 @@ section > h1{
   border-radius: 20px;
 }
 
-.carrosel-roses .product-roses .inf button, .carrosel-cesta .product-cesta .inf button, .carrosel-choco .product-choco button{
+.carrosel-roses .product-roses .inf button, .carrosel-cesta .product-cesta .inf button, .carrosel-choco .product-choco button, .carrosel-pelucia .product-pelucia .inf button{
   width: 1%;
   font-size: 40px;
   margin: 5px 0 -25px 0;
@@ -256,17 +256,17 @@ section > h1{
  
 }
 
-.carrosel-roses .product-roses .inf .title, .carrosel-cesta .product-cesta .inf .title, .carrosel-choco .product-choco .inf{
+.carrosel-roses .product-roses .inf .title, .carrosel-cesta .product-cesta .inf .title, .carrosel-choco .product-choco .inf .title, .carrosel-pelucia .product-pelucia .inf .title{
   font-size: 24px;
   cursor: pointer;
 }
 
-.carrosel-roses .product-roses .inf .title:hover, .carrosel-cesta .product-cesta .inf .title:hover, .carrosel-choco .product-choco .inf .title:hover{
+.carrosel-roses .product-roses .inf .title:hover, .carrosel-cesta .product-cesta .inf .title:hover, .carrosel-choco .product-choco .inf .title:hover, .carrosel-pelucia .product-pelucia .inf .title:hover{
   color:#D85B95;
   transition: 0.3s ease;
 }
 
-.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price{
+.carrosel-roses .product-roses .inf  .price, .carrosel-cesta .product-cesta .inf .price, .carrosel-choco .product-choco .inf .price, .carrosel-pelucia .product-pelucia .inf .price{
   font-size: 15px;
   font-weight:lighter;
   color: rgb(58, 58, 58);
@@ -275,7 +275,7 @@ section > h1{
 
 
 
-.carrosel-roses .seta, .carrosel-cesta .seta, .carrosel-choco .seta{
+.carrosel-roses .seta, .carrosel-cesta .seta, .carrosel-choco .seta, .carrosel-pelucia .seta{
   
   position: absolute;
   justify-content: space-between;
@@ -284,7 +284,7 @@ section > h1{
   
 }
 
-.carrosel-roses .seta button, .carrosel-cesta .seta button, .carrosel-choco .seta button{
+.carrosel-roses .seta button, .carrosel-cesta .seta button, .carrosel-choco .seta button, .carrosel-pelucia .seta button{
   font-size: 30px;
   width: 50px;
   height: 50px;
@@ -297,7 +297,7 @@ section > h1{
 
 }
 
-.carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
+.carrosel-roses .carrosel-cesta .carrosel-choco .carrosel-pelucia, .left-roses{
   height: 50px;
   width: 50px;
 
@@ -418,7 +418,7 @@ section > h1{
 @media screen and (max-width:1830px) {
 
   
-  .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
+  .carrosel-roses .carrosel-cesta .carrosel-choco .carrosel-pelucia, .left-roses{
     margin-left: 87%;
   }
 
@@ -431,7 +431,7 @@ section > h1{
 
   .carrosel-roses,
   .carrosel-cesta,
-  .carrosel-choco {
+  .carrosel-choco, .carrosel-pelucia {
     overflow: hidden;
     overflow-y: hidden;
     overflow-x:scroll;
@@ -450,7 +450,7 @@ section > h1{
 
   .carrosel-roses,
   .carrosel-cesta,
-  .carrosel-choco {
+  .carrosel-choco, .carrosel-pelucia {
     overflow: hidden;
     overflow-y: hidden;
     overflow-x:scroll;
@@ -462,7 +462,7 @@ section > h1{
 
   .carrosel-roses .product-roses,
   .carrosel-cesta .product-cesta,
-  .carrosel-choco .product-choco {
+  .carrosel-choco .product-choco, .carrosel-pelucia .product-pelucia {
     margin: 0 5% 0 -20px; /* Adjusted margin */
     padding-right: 0px;
     padding-left: 20px;
@@ -514,7 +514,7 @@ section > h1{
   }
 
   
-  .carrosel-roses .carrosel-cesta .carrosel-choco, .left-roses{
+  .carrosel-roses .carrosel-cesta .carrosel-choco .carrosel-pelucia, .left-roses{
     margin-left: 80%;
   }
 
@@ -579,7 +579,7 @@ section > h1{
   }
   .carrosel-roses,
   .carrosel-cesta,
-  .carrosel-choco {
+  .carrosel-choco, .carrosel-pelucia {
     overflow: hidden;
     overflow-y: hidden;
     overflow-x:scroll;
@@ -589,10 +589,10 @@ section > h1{
   }
   .carrosel-roses .product-roses,
   .carrosel-cesta .product-cesta,
-  .carrosel-choco .product-choco {
-    margin: 0 15% 0 -20px; /* Adjusted margin */
+  .carrosel-choco .product-choco, .carrosel-pelucia .product-pelucia {
+    margin: 0 15% 0 -10px; /* Adjusted margin */
     padding-right: 0px;
-    padding-left: 30px;
+    padding-left: 50px;
     max-width: 100%; /* Added maximum width */
     box-shadow: none;
     border-radius: 20px;
@@ -600,24 +600,24 @@ section > h1{
   }
   .carrosel-roses .product-roses .inf .title,
   .carrosel-cesta .product-cesta .inf .title,
-  .carrosel-choco .product-choco .inf {
+  .carrosel-choco .product-choco .inf .title, .carrosel-pelucia .product-pelucia .inf .title {
     font-size: 1.2em;
-    text-align: center;
+   
     
     margin: 0;
   }
   .carrosel-roses .product-roses .inf .price,
   .carrosel-cesta .product-cesta .inf .price,
-  .carrosel-choco .product-choco .inf .price {
+  .carrosel-choco .product-choco .inf .price, .carrosel-pelucia .product-pelucia .inf .price{
     font-size: 15px;
     font-weight: lighter;
     color: rgb(58, 58, 58);
     margin-top: 5px;
-    text-align: center;
+  
   }
   .carrosel-roses .product-roses img,
   .carrosel-cesta .product-cesta img,
-  .carrosel-choco .product-choco img {
+  .carrosel-choco .product-choco img, .carrosel-pelucia .product-pelucia img {
     height: 200px;
     width: 200px;
     object-fit: cover;

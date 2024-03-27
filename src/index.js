@@ -2,7 +2,7 @@ import _ from 'lodash';
 import "../styles/style.css"
 import "../node_modules/bootstrap-icons/font/bootstrap-icons.css"
 import { individualProduct } from './individual.js';
-import { apertarCar, carregarItens } from './carrinho.js';
+import { apertarCar, aumentarDiminuir, addToCart } from './carrinho.js';
 const carousel = document.querySelectorAll('.carrosel .product')
 const section = document.querySelectorAll('section')
 const carousel3 = document.querySelector('#carr')
@@ -24,6 +24,7 @@ title.forEach(title => {
   title.addEventListener('click', (e) => {
     const productIdURL = title.id;
     individualProduct();
+   
     window.location.href = `individual.html?id=${productIdURL}`;
   });
 });
@@ -73,7 +74,7 @@ function left(){
 
 
 async function updateCarousel(id = carousel, name) {
-
+ 
   try{
     let itens
     let itensIndividual
@@ -94,6 +95,12 @@ async function updateCarousel(id = carousel, name) {
       itensIndividual = await itens.json() 
     }
 
+    if(name === 'pelucia'){
+      itens = await fetch('../pelucia.json')
+      itensIndividual = await itens.json() 
+    }
+
+
   for (let i = 0; i < id.length; i++) {
     const newIndex = count + i;
     const product = itensIndividual[newIndex % itensIndividual.length] 
@@ -109,8 +116,9 @@ async function updateCarousel(id = carousel, name) {
   } catch(error){
     console.log(error)
   }
-  apertarCar()
   loadTitle()
+  apertarCar()
+  
 }
 
 
@@ -121,6 +129,7 @@ function clickLeftButton(){
   const roses = document.querySelectorAll('.carrosel-roses .product-roses')
   const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
   const choco = document.querySelectorAll('.carrosel-choco .product-choco')
+  const pelucia = document.querySelectorAll('.carrosel-pelucia .product-pelucia')
 
   leftBtn.forEach((item) => {
     item.addEventListener('click', e => {
@@ -141,6 +150,11 @@ function clickLeftButton(){
       updateCarousel(choco, 'choco')
       left()
      }
+
+     if(item.id === 'peluciaLeft'){
+      updateCarousel(pelucia, 'pelucia')
+      left()
+     }
     })
   })
 
@@ -153,6 +167,8 @@ function clickRigthButton(){
   const roses = document.querySelectorAll('.carrosel-roses .product-roses')
   const cesta = document.querySelectorAll('.carrosel-cesta .product-cesta')
   const choco = document.querySelectorAll('.carrosel-choco .product-choco')
+  const pelucia = document.querySelectorAll('.carrosel-pelucia .product-pelucia')
+
 
   rightBtn.forEach((item) => {
     item.addEventListener('click', e => {
@@ -160,7 +176,6 @@ function clickRigthButton(){
      if(item.id === 'cestaRigth'){
       updateCarousel(cesta, 'cesta')
       rigth()
-   
      } 
 
      if(item.id === 'rigthRoses'){
@@ -171,8 +186,12 @@ function clickRigthButton(){
 
      if(item.id === 'chocoRigth'){
       updateCarousel(choco, 'choco')
-      rigth()
-      
+      rigth()  
+     }
+
+     if(item.id === 'peluciaRigth'){
+      updateCarousel(pelucia, 'pelucia')
+      rigth()  
      }
     })
   })
@@ -206,6 +225,6 @@ navBar.addEventListener('click', e => {
 clickRigthButton()
 clickLeftButton()
 updateCarousel(carousel)
-loadTitle()
 
+aumentarDiminuir()
 

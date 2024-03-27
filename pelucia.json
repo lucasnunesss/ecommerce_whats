@@ -1,0 +1,69 @@
+[
+  {
+    "img": "../img_pelucias_p/pelucia1.avif",
+    "h1": "Cachorrinho de pelúcia Amor",
+    "id": 61,
+    "preco": 70.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia2.jpg",
+    "h1": "Pelucia I Love You na sacolinha",
+    "id": 62,
+    "preco": 120.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia3.avif",
+    "h1": "Urso de pelúcia coração laço",
+    "id": 63,
+    "preco": 70.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia4.jpg",
+    "h1": "Urso M Eu te Amo",
+    "id": 64,
+    "preco": 90.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia5.jpg",
+    "h1": "Urso Amor",
+    "id": 65,
+    "preco": 45.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia6.avif",
+    "h1": "Urso com olho de coração",
+    "id": 66,
+    "preco": 60.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia7.avif",
+    "h1": "Urso Love",
+    "id": 67,
+    "preco": 90.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia8.avif",
+    "h1": "Coração com Amor e Carinho",
+    "id": 68,
+    "preco": 50.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia9.avif",
+    "h1": "Mini urso coração amor",
+    "id": 69,
+    "preco": 20.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia10.avif",
+    "h1": "Urso de pelúcia azul",
+    "id": 70,
+    "preco": 60.00
+  },
+  {
+    "img": "../img_pelucias_p/pelucia11.avif",
+    "h1": "Urso de pelúcia rosa",
+    "id": 71,
+    "preco": 60.00
+  }
+
+]

@@ -1,10 +1,10 @@
 import { isArray } from "lodash";
-
+import { individualProduct } from "./individual";
 const contagemItens = document.querySelector('.contagemItens');
-const icons = document.querySelector('.icons');
+
 let count = 0;
-
-
+const quantidade = document.querySelector('.listCart');
+const listProductHtml = document.querySelector('.listCart');
 const teste = document.querySelector('.divCart');
 const limpar = document.querySelector('.limpar');
 
@@ -26,8 +26,8 @@ function apertarCar() {
       contagemItens.textContent = count;
       remover();
       carregarCount()
+      
      
-
       let productId = item.parentElement.childNodes.item('title').id;
 
       if (productId === undefined) {
@@ -35,12 +35,14 @@ function apertarCar() {
       } else {
         addToCart(productId);
       }
-
+      console.log("id", productId)
       if (count > 30) {
         count = 0;
       }
     });
+
   });
+
 }
 
 const addToCart = (productId) => {
@@ -62,17 +64,18 @@ const addToCart = (productId) => {
 
 
   localStorage.setItem('cartItems', JSON.stringify(carts));
-  addCardToHtml()
+  addCardToHtml();
 }
 
 let item2;
-  
+
 
 function addCardToHtml() {
-  const listProductHtml = document.querySelector('.listCart');
-  listProductHtml.innerHTML = ''; // Limpar o conteúdo antes de renderizar os novos itens
   
+  listProductHtml.innerHTML = ''; // Limpar o conteúdo antes de renderizar os novos itens
+ 
   const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  
   cartItems.forEach(cartItem => {
     const productId = cartItem.productId;
     const quantity = cartItem.quantidade;
@@ -88,15 +91,18 @@ function addCardToHtml() {
             <img src="${productData.img}" alt="">
           </div>
           <div class="name">${productData.h1}</div>
-          <div class="totalPrice">${productData.preco}</div>
+          <div class="totalPrice">${productData.preco * quantity}</div>
           <div class="quantidade">
-            <span class="minus">-</span>
-            <span>${quantity}</span>
-            <span class="mais">+</span>
+            <span id="${productData.id}" class="minus">-</span>
+            <span >${quantity}</span>
+            <span id="${productData.id}" class="mais">+</span>
+      
           </div>`;
         listProductHtml.appendChild(newCart);
       });
+    
   });
+
 }
 
 function carregarCount() {
@@ -117,37 +123,98 @@ function loadCount() {
   if (cartItems) {
     carts = JSON.parse(cartItems);
     addCardToHtml();
-
+   
   }
 
 
 }
 
 function carregarItens() {
+  const icons = document.querySelector('.icons');
   icons.addEventListener('click', e => {
     teste.classList.toggle('dis');
+    
     loadCount()
    
   });
 }
 
+
+
+
 function clean() {
-  const listProductHtml = document.querySelector('.listCart');
+  
   limpar.addEventListener('click', e => {
     count = 0;
     contagemItens.textContent = count;
     localStorage.setItem('count', count);
-
+    
     carts = [];
     listProductHtml.innerHTML = ''
+    
     localStorage.setItem('cartItems', JSON.stringify(carts = []));
-   
+    
   });
+}
+
+function aumentarDiminuir() {
+
+  quantidade.addEventListener('click', e => {
+    const positionClick = e.target;
+    
+    if (positionClick.classList.contains('minus') || positionClick.classList.contains('mais')) {
+      const productId = positionClick.id;
+      const type = positionClick.classList.contains('mais') ? 'mais' : 'menos';
+      
+      mudarQuantidade(productId, type);
+    }
+  });
+}
+
+function mudarQuantidade(productId, type) {
+  const positionItemInCart = carts.findIndex((value) => value.productId === productId);
+
+  if (positionItemInCart >= 0) {
+    switch (type) {
+      case 'mais':
+        aumentarQuantidade(positionItemInCart);
+        break;
+      case 'menos':
+        diminuirQuantidade(positionItemInCart);
+        break;
+    }
+  }
+}
+
+function aumentarQuantidade(positionItemInCart) {
+  carts[positionItemInCart].quantidade++;
+  atualizarCarrinho();
+ 
+
+}
+
+function diminuirQuantidade(positionItemInCart) {
+  if (carts[positionItemInCart].quantidade > 1) {
+    carts[positionItemInCart].quantidade--;
+  } else {
+    carts.splice(positionItemInCart, 1);
+  }
+  atualizarCarrinho();
+
+}
+
+function atualizarCarrinho() {
+  localStorage.setItem('cartItems', JSON.stringify(carts));
+  addCardToHtml();
 }
 
 loadCount()
 
+
+
 export {
   apertarCar,
-  carregarItens
+  carregarItens,
+  aumentarDiminuir,
+  loadCount
 };
