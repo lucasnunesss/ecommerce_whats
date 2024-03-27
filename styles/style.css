@@ -46,19 +46,21 @@ header{
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  height: 115px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
 } 
 
 
 header .navBar{
-  padding-top: 5em;
+  padding-top: 3em;
 
   display: flex;
   justify-content: center;
 }
 
 .sellva {
- width: 171px;
+ width: 161px;
+ margin-top: -10px;
  background-color: #fcda52;
  margin-left: 70px;
 }
@@ -82,7 +84,7 @@ header > .icons > .bi.bi-cart{
   font-size: 1.3rem;
   color: #333;
   margin-right: 3.5rem;
-  margin-top: 6.8rem;
+  margin-top: 6rem;
   cursor: pointer;
 }
 
@@ -459,6 +461,15 @@ section > h1{
     margin-bottom: 0;
     text-align: center;
   }
+ 
+  header > .navBar a {
+    padding-top: 10px;
+    margin-top: -10px;
+    margin-left: -10px;
+    display: block;
+    width: 300px;
+    background-color: #fcda52;
+  }
 
   .carrosel-roses .product-roses,
   .carrosel-cesta .product-cesta,
@@ -473,10 +484,18 @@ section > h1{
     text-align: center;
   }
 
-
   header{
-    padding: 2rem;
-  }
+    position: fixed;
+    top:0; left:0; right: 0;
+    background-color: #fcda52;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    height: 115px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1);
+  } 
+ 
 
   article{
     padding: 2rem;
@@ -487,7 +506,7 @@ section > h1{
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 788px){
   header > .sellva{
     display:none;
   }
